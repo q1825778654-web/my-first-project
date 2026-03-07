@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册信息</title>
+    <style>
+      body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        font-size: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      }
+  
+
+      .form-row {
+    display: flex;          /* 开启Flex布局 */
+    align-items: center;    /* 垂直居中对齐 */
+    margin-bottom: 15px;    /* 每行之间的间距 */
+    }
+
+    .form-row label {
+    width: 80px;            /* 固定标签宽度，所有行统一 */      
+    text-align: right;      /* 让文字右对齐，更整齐（可选） */
+    margin-right: 10px;     /* 标签和输入框之间的间距 */
+    }
+
+    .form-row input {
+    flex: 1;                /* 输入框自动填满剩余宽度 */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    } 
+
+    .form-row textarea {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    }
+
+    .form-row select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+}
+
+  .radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  .radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0069c2;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.btn:hover {
+    background-color: #004c99;
+}
+.btn[type="reset"] {
+    background-color: #6c757d;
+}
+.btn[type="reset"]:hover {
+    background-color: #545b62;
+}
+
+    a {
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+    background-color: #f9f;
+    margin: 20px auto; 
+  }
+
+  h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+  .section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 40px;
+    background-color: #e0e0e0;
+    margin: 30px 0 20px;
+  }
+
+  .protocol-list {
+    list-style: none;
+    padding-left: 90px;  /* 与标签的宽度+间距对齐 */
+    margin-top: 0;
+  }
+
+  .protocol-list li {
+    margin-bottom: 5px;
+  }
+    </style>
+</head>
+<body>
+    
+    <h1>注册信息</h1>
+    <form action="">
+
+    <h2 class="section-title">个人信息</h2>
+
+    <div class="form-row"> 
+      <label >姓名：</label><input type="text" placeholder="请输入真实姓名">
+    </div>
+
+    <div class="form-row">
+    <label >密码：</label><input type="password" placeholder="请输入密码">
+    </div>
+
+    <div class="form-row">
+      <label>确认密码: </label><input type="password" placeholder="请输入确认密码">
+    </div>
+
+    <div class="form-row">
+      <label>性别：</label>
+        <div class="radio-group">
+          <label> <input type="radio" name="garder" class="a">男</label>
+          <label> <input type="radio" name="garder" class="a">女</label>
+        </div>
+    </div>
+
+    <div class="form-row">
+      <label>居住城市：</label>
+      <select>
+        <option>北京</option>
+          <option selected>上海</option>
+            <option>深圳</option>
+              <option>武汉</option>
+                <option>济南</option>
+      </select>
+    </div>
+    
+    <h2 class="section-title">教育经历</h2>
+
+    <div class="form-row">
+      <label>最高学历：</label>
+        <select>
+         <option>大专</option>
+          <option selected>本科</option>
+          <option>研究生</option>
+          <option>硕士</option>
+          <option>博士</option>
+      </select>
+    </div>
+
+    <div class="form-row">
+    <label for="">学校名称：</label>
+    <input type="text" placeholder="请输入学校">
+    </div>
+
+    <div class="form-row">
+      <label for="">所学专业：</label>
+      <input type="text" placeholder="请输入专业">
+    </div>
+
+    <div class="form-row">
+      <label for="">在校时间：</label>
+      <div style="display: flex; gap: 10px; flex: 1; align-items: center;">
+    <select style="flex: 1;">
+      <option>2016</option>
+      <option>2017</option>
+       <option>2018</option>
+       <option>2019</option>
+       <option>2020</option>
+          </select>
+          -- 
+          <select style="flex: 1;">
+        <option>2021</option>
+         <option>2022</option>
+         <option>2023</option>
+           <option>2024</option>
+           <option>2025</option>
+        </select>
+      </div>
+    </div>
+    
+    
+     <h2 class="section-title">工作经历</H2>
+      <div class="form-row">
+       <label>公司名称：</label><input type="text" placeholder="请输入公司名称">
+      </div>
+      <div class="form-row">
+    <label>工作描述：</label>
+     <textarea></textarea>
+    </div>
+  
+    <div class="form-row">
+      <label for=""></label>
+        <div>
+          <input type="checkbox" id="agree"><label for="agree">已阅读并同意以下协议：</label>
+        </div>
+    </div>
+     <ul class="protocol-list">
+        <li><a href="#" class="">《用户服务协议》</a></li>
+        <li><a href="#">《隐私协议》</a></li>
+     </ul>
+    
+    <div class="form-row">
+      <label></label>
+        <div>
+     <button class="btn" type="submit">免费注册</button>
+     <button class="btn" type="reset">重新填写</button>
+        </div>
+     </div>
+  </form>
+</body>
+</html>
